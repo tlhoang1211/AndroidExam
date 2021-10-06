@@ -8,11 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class Database extends SQLiteOpenHelper {
-    public static final String DB_NAME = "ANDROID_EXAM";
-    public static final int DB_VERSION = 1;
-
-    public Database(@Nullable Context context) {
-        super(context, DB_NAME, null, DB_VERSION);
+    public Database(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, name, factory, version);
     }
 
     @Override

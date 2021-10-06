@@ -4,8 +4,8 @@ import android.app.Application;
 
 import com.example.androidexam.model.Database;
 
-public class App extends Application {
-    private static App instance;
+public class SubActivity extends Application {
+    private static SubActivity instance;
     private Database database;
 
     @Override
@@ -15,7 +15,7 @@ public class App extends Application {
         database = new Database(this, "Exam.sqlite", null, 1);
     }
 
-    public static App getInstance() {
+    public static SubActivity getInstance() {
         return instance;
     }
 

@@ -8,6 +8,8 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.androidexam.SubActivity;
+import com.example.androidexam.R;
 import com.example.androidexam.adapter.ProductAdapter;
 import com.example.androidexam.model.Product;
 
@@ -37,7 +39,7 @@ public class ListAllProducts extends AppCompatActivity  {
 
     private void getAllData() {
         products.clear();
-        Cursor cursor = App.getInstance().getDatabase().getData("SELECT * FROM Product");
+        Cursor cursor = SubActivity.getInstance().getDatabase().getData("SELECT * FROM Product");
         while (cursor.moveToNext()) {
             int id = cursor.getInt(0);
             String name = cursor.getString(1);
